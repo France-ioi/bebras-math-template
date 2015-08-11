@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>Math sample task</title>
+      <link class="module" rel="stylesheet" href="../../modules/pemFioi/taskStyles-0.1.css" id="http://www.france-ioi.org/modules/pemFioi/taskStyles-0.1.css">
+      <link class="module" rel="stylesheet" href="../../modules/pemFioi/maths/mathTask-0.1.css" id="http://www.france-ioi.org/modules/pemFioi/maths/mathTask-0.1.css">
+    <script class="module" src="../../modules/ext/jquery/1.7/jquery.min.js" id="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script class="module" type="text/javascript" src="../../modules/ext/json/json2.min.js" id="https://github.com/douglascrockford/JSON-js"></script>
+    <script class="remove" type="text/javascript" src="../../modules/integrationAPI.01/installationAPI.01/pemFioi/installation.js" id="http://www.france-ioi.org/modules/integrationAPI.01/installationAPI.01/pemFioi/installation.js"></script>
+    <script class="proxy module" type="text/javascript" src="../../modules/integrationAPI.01/official/platform-pr.js" id="http://www.france-ioi.org/modules/integrationAPI.01/official/platform-pr.js"></script>
+    <script class="module" type="text/javascript" src="../../modules/pemFioi/beaver-task.js" id="http://www.france-ioi.org/modules/pemFioi/beaver-task.js"></script>
+    <script class="stdAnswerTypes module" type="text/javascript" src="../../modules/integrationAPI.01/installationAPI.01/pemFioi/answerTypes.js" id="http://www.france-ioi.org/modules/integrationAPI.01/installationAPI.01/pemFioi/answerTypes.js"></script>
+    <link class="stdAnswerTypes module" rel="stylesheet" type="text/css" href="../../modules/integrationAPI.01/installationAPI.01/pemFioi/answerTypes.css" id="http://www.france-ioi.org/modules/integrationAPI.01/installationAPI.01/pemFioi/stdAnsTypes.css" />
+    <script class="stdButtonsAndMessages module" type="text/javascript" src="../../modules/integrationAPI.01/installationAPI.01/pemFioi/buttonsAndMessages.js"  id="http://www.france-ioi.org/modules/integrationAPI.01/installationAPI.01/pemFioi/buttonsAndMessages.js"></script>
+    <script class="remove" type="text/javascript" src="../../modules/integrationAPI.01/official/miniPlatform.js" id="http://www.france-ioi.org/modules/integrationAPI.01/official/miniPlatform.js"></script>
+    <script class="module" type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" id="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../modules/pemFioi/maths/math-task-common-0.1.js" id="http://www.france-ioi.org/modules/pemFioi/maths/math-task-common-0.1.js"></script>
+    <script class="module" type="text/x-mathjax-config" >
+       MathJax.Hub.Config({
+          config: ["TeX-AMS-MML_HTMLorMML.js"],
+          extensions: ["tex2jax.js","Safe.js", "MatchWebFonts.js"],
+          MMLorHTML: { prefer: { Firefox: "MML" } },
+          tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+          "HTML-CSS": {
+             webFont: "STIX-Web",
+             linebreaks: { automatic: true },
+          }
+       });
+    </script>
+    <script class="task" type="text/javascript">
+       stdAnsTypes.genTaskFreeInput("text", "#answer-area", 1, 20);
+    </script>
+    <script class="remove" type="text/javascript">var json = {
+       "id": "http://task.pem.dev/examples/tasks/draft-maths/",
+       "language": "fr",
+       "version": "fr.01",
+       "authors": "",
+       "translators": [],
+       "license": "",
+       "taskPathPrefix": "",
+       "modulesPathPrefix": "",
+       "browserSupport": [],
+       "acceptedAnswers": []
+    };
+    </script>
+   </head>
+   <body>
+<div id="task">
+<h1>Exercice</h1>
+
+<p>Soient $b$ et \(d\) des nombres réels non nuls tels que \(b+d\) soit lui aussi non nul. Mathias affirme que l’identité \(\frac{a}{b}+\frac{c}{d} = \frac{a+c}{b+d}\) est vraie pour tous les nombres réels \(a\) et \(c\)&#8239;: elle s’appelle <em>additivité des fractions</em>. Mathilde pense que cette additivité des fractions est correcte si et seulement s’il existe un nombre réel \(m\) tel que \(a = mb^2\) et \(c = md^2\). Leur professeur rappelle que l’on peut additionner des fractions comme Mathias le propose si et seulement si elles ont le même dénominateur, c’est-à-dire \(b = d\). Un inspecteur affirme que cette <em>additivité des fractions</em> est toujours fausse.</p>
+<p>Qui a raison&#8239;: Mathias, Mathilde, le professeur, l’inspecteur, ou aucun des quatre&#8239;? Justifiez soigneusement votre réponse.</p>
+
+<center>
+<div id="answer-area"></div>
+</center>
+
+</div>
+
+<div id="solution">
+<h1>Solution</h1>
+
+<p>Examinons successivement les affirmations des uns et des autres.</p>
+
+<h4>Celle de Mathias</h4>
+<p>Il suffit de trouver un contre-exemple pour mettre en défaut une affirmation générale. Pour \(a = b = c = d = 1\), on a \(\frac{a}{b} + \frac{c}{d} = 2\) alors que \(\frac{a+c}{b+d} = 1\). Il n’y a pas égalité, donc l’affirmation de Mathias est fausse.</p>
+
+<h4>Celle du professeur</h4>
+<p>Celui-ci fait également une affirmation générale, et le même contre-exemple (puisque \(b=d\)) montre qu’il a tort lui aussi.</p>
+
+<h4>Celle de l’inspecteur</h4>
+<p>Cette fois, pour mettre en défaut l’affirmation de l’inspecteur, il suffit de trouver des valeurs pour lesquelles l’<em>additivité des fractions</em> est vraie. Par exemple, on peut choisir \(a = c = 0\) et \(b = d = 1\), puisqu’alors \(\frac{a}{b}+\frac{c}{d} = 0 = \frac{a+c}{b+d}\). Ainsi,l’Inspecteur a tort.</p>
+
+<h4>Celle de Mathilde</h4>
+C’est la seule des quatre qui puisse être juste, encore faut-il le prouver. Dans un premier temps, considérons des nombres \(a\), \(b\), \(c\), \(d\), \(m\) tels que \(b\), \(d\) et \(b+d\) soient non nuls, et avec \(a = mb^2\) et \(c = −md^2\). On a d’une part :
+
+$$\frac{a}{b}+\frac{c}{d} = mb−md = m(b−d)$$
+
+et d’autre part :
+
+$$\frac{a+c}{b+d} = \frac{mb2−md2}{b+d} = \frac{m(b2−d2)}{b+d} = \frac{m(b−d)(b+d)}{b+d} = m(b−d)$$
+
+On constate donc que, dans ces conditions, l’<em>additivité des fractions</em> est vraie. Mais, attention, cela ne suffit pas encore pour pouvoir conclure que Mathilde a raison. En effet, Mathilde affirme non seulement que l’additivité des fractions est vraie si l’on choisit les nombres de la façon indiquée, mais aussi qu’elle n’est vraie que dans ce cas là. Il nousfaut maintenant prouver la réciproque du résultat ci-dessus, à savoir que si \(a\), \(b\), \(c\) et \(d\) sont des nombres pour lesquels \(b\), \(d\) et \(b+d\) ne sont pas nuls et \(\frac{a}{b}+\frac{c}{d}=\frac{a+c}{b+d}\) alors il existe un réel \(m\) tel que \(a = mb^2\) et \(c = −md^2\). Si quatre nombres \(a\), \(b\), \(c\) et \(d\) (avec \(b\), \(d\) et \(b+d\) non nuls) vérifient \(\frac{a}{b}+\frac{c}{d} = \frac{a+c}{b+d}\) (1), multiplions tout par \(bd(b+d)\) afin d’éliminer les dénominateurs : l’égalité (1) devient \(ad(b+d)+cb(b+d) = (a+c)bd\), soit : \(ad^2+cb^2 = 0\), qui s’écrit aussi \(ab^2=−cd^2\) (2).
+Posons alors \(m = \frac{a}{b^2}\). On a clairement \(a=mb^2\). Mais aussi, d’après (2), \(m=−\frac{c}{d^2}\), donc \(c=−md^2\). Nous avons atteint notre objectif et nous pouvons maintenant affirmer que Mathilde a effectivement raison.
+</div>
+
+   </body>
+</html>
